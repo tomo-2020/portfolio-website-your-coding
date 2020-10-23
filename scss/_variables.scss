@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+// --------------------------------------------------------
+// _variables.scss
+// --------------------------------------------------------
+
+// --------------------------------------------------------
+// メデイアクエリ
+// --------------------------------------------------------
+$pc: 1366px;
+$tab: 959px; // Android Tablet 8インチのランドスケープ（960px）はPC扱いにする // iPad Pro12.9の7:3 Split ViewはPC扱いにする
+$sp: 559px; // iPhoneSEのランドスケープ（568px）、iPad Pro 11の5:5 Split Viewもタブレット扱いにするために560pxに設定。
+// 最小値は320px
+
+// --------------------------------------------------------
+// カラー
+// --------------------------------------------------------
+$colorWhite: #ffffff;
+$colorLightGlayLight: #f8f8f8;
+$colorLightGlayBase: #f2f2f2;
+$colorBlueLightGlay: #eefbfb;
+$colorGlayLight: #dddddd;
+$colorGlayBase: #e5e5e5;
+$colorGlayHeavy: #00000029;
+$colorDrakGlay: #707070;
+$colorBlackLight: #444444;
+$colorBlackBase: #333333;
+$colorGlayBlue: #3ba6c9;
+$colorBlue: #05a5fa;
+$colorDarkBlue: #0c449b;
+$colorGreenLight: #67ffd6;
+$colorGreenBase: #63fbd7;
+// $colorYellow: #f7d43f;
+$colorMagenta: #fa41cc;
+// $colorRed: #ae0009;
+$colorpurple: #6020b0;
+
+// --------------------------------------------------------
+// フォント
+// --------------------------------------------------------
