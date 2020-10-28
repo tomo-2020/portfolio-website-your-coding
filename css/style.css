@@ -36,6 +36,7 @@ p {
 .primary-heading {
   font-size: 3.2rem;
   line-height: 1.4;
+  text-align: center;
 }
 
 .subheading {
@@ -157,9 +158,10 @@ p {
 
 .hero {
   background-image: url(../image/bg-round.svg);
+  background-size: 700px auto;
   background-position: 705px 0;
   background-repeat: no-repeat;
-  height: 674px;
+  height: 768px;
   padding-top: 94px;
 }
 
@@ -200,6 +202,11 @@ p {
   position: absolute;
   top: 25%;
   right: 4%;
+}
+
+.features {
+  padding-top: 71px;
+  padding-bottom: 154px;
 }
 
 .footer {
