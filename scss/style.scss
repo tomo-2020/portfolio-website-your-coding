@@ -118,6 +118,51 @@
     }
 }
 
+// --------------------------------------------------------
+// hero
+// --------------------------------------------------------
+.hero {
+    background-image: url(../image/bg-round.svg);
+    background-position: 705px 0;
+    background-repeat: no-repeat;
+    height: 674px;
+    padding-top: 94px;
+
+    &__container {
+        width: 100%;
+        max-width: 1022px;
+        margin: 0 auto;
+        padding-left: 21px;
+        padding-right: 21px;
+        display: flex;
+        position: relative;
+    }
+    &__text-box {
+        width: 360px;
+        margin-top: 159px;
+    }
+    &__catchcopy {
+        font-size: 3.2rem;
+        line-height: 1.4;
+    }
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        width: 260px;
+        margin-top: 44px;
+    }
+    &__button-wrapper {
+        margin-top: 53px;
+    }
+    &__image-wrapper {
+        // margin-left: 13%;
+        position: absolute;
+        top: 25%;
+        right: 4%;
+        // transform: translateY(-50%);
+
+    }
+}
 
 
 // --------------------------------------------------------
