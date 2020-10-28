@@ -8,17 +8,17 @@
 // メデイアクエリ
 // --------------------------------------------------------
 @mixin pc {
-  @media (max-width: ($pc)) {
-    @content;
-  }
+    @media (max-width: ($pc)) {
+        @content;
+    }
 }
 @mixin tab {
-  @media (max-width: ($tab)) {
-    @content;
-  }
+    @media (max-width: ($tab)) {
+        @content;
+    }
 }
 @mixin sp {
-  @media (max-width: ($sp)) {
-    @content;
-  }
+    @media (max-width: ($sp)) {
+        @content;
+    }
 }
