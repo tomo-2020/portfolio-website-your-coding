@@ -13,7 +13,7 @@
 .body-inner {
     //コンテンツが少ない場合にfooterを最下部に固定する
     position: relative;
-    height: 244px; //footerの高さ
+    padding-bottom: 244px; //footerの高さ
     min-height: 100vh;
 }
 .wrapper {
@@ -115,4 +115,14 @@
     &__button-wrapper {
         margin-left: auto;
     }
+}
+
+
+
+// --------------------------------------------------------
+// footer
+// --------------------------------------------------------
+.footer {
+    position: absolute;
+    bottom: 0;
 }

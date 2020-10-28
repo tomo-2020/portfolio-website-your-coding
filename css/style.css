@@ -17,7 +17,7 @@ p {
 
 .body-inner {
   position: relative;
-  height: 244px;
+  padding-bottom: 244px;
   min-height: 100vh;
 }
 
@@ -151,5 +151,10 @@ p {
 
 .header__button-wrapper {
   margin-left: auto;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
