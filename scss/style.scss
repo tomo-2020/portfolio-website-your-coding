@@ -41,6 +41,7 @@
 .secondary-heading {
     font-size: 2.8rem;
     line-height: 1.4;
+    text-align: center;
 }
 .tertiary-heading {
     font-size: 2.4rem;
@@ -54,10 +55,10 @@
     padding: 8px 35px 10px;
     border-radius: 10px;
     box-shadow: 0 3px 6px #00000029;
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
-        opacity: .8;
-        transition: all .3s;
+        opacity: 0.8;
+        transition: all 0.3s;
     }
 }
 
@@ -80,10 +81,10 @@
         display: inline-block;
     }
     &__logo-link {
-        transition: all .3s;
+        transition: all 0.3s;
         &:hover {
-            opacity: .7;
-            transition: all .5s;
+            opacity: 0.7;
+            transition: all 0.5s;
         }
     }
     &__image {
@@ -108,10 +109,10 @@
         }
     }
     &__link {
-        transition: all .5s;
+        transition: all 0.5s;
         &:hover {
             color: $colorGlayBlue;
-            transition: all .3s;
+            transition: all 0.3s;
         }
     }
     &__button-wrapper {
@@ -162,7 +163,10 @@
         top: 25%;
         right: 4%;
         // transform: translateY(-50%);
-
+    }
+    &__image {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -172,9 +176,36 @@
 .features {
     padding-top: 71px;
     padding-bottom: 154px;
+
+    &__list {
+        margin-top: 57px;
+    }
+    &__item {
+        &:not(:nth-of-type(1)) {
+            margin-top: 100px;
+        }
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+    }
+    &__image-wrapper {
+        margin-right: 5%;
+    }
+    &__image {
+        max-width: 100%;
+        height: auto;
+    }
+    &__text-block {
+        max-width: 46%;
+        margin-left: auto;
+    }
+    &__desc {
+        line-height: 1.6;
+        margin-top: 40px;
+    }
 }
-
-
 
 // --------------------------------------------------------
 // footer
