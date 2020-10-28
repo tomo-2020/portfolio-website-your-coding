@@ -155,6 +155,53 @@ p {
   margin-left: auto;
 }
 
+.hero {
+  background-image: url(../image/bg-round.svg);
+  background-position: 705px 0;
+  background-repeat: no-repeat;
+  height: 674px;
+  padding-top: 94px;
+}
+
+.hero__container {
+  width: 100%;
+  max-width: 1022px;
+  margin: 0 auto;
+  padding-left: 21px;
+  padding-right: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.hero__text-box {
+  width: 360px;
+  margin-top: 159px;
+}
+
+.hero__catchcopy {
+  font-size: 3.2rem;
+  line-height: 1.4;
+}
+
+.hero__desc {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 260px;
+  margin-top: 44px;
+}
+
+.hero__button-wrapper {
+  margin-top: 53px;
+}
+
+.hero__image-wrapper {
+  position: absolute;
+  top: 25%;
+  right: 4%;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
