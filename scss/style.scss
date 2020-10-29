@@ -292,6 +292,53 @@
 }
 
 // --------------------------------------------------------
+// blog
+// --------------------------------------------------------
+.blog {
+    padding-top: 55px;
+    padding-bottom: 91px;
+    background-color: $colorBlueLightGlay;
+
+    &-container {
+        width: 100%;
+        max-width: 1268px;
+        margin: 0 auto;
+        padding-left: 21px;
+        padding-right: 21px;
+    }
+    &__list {
+        margin-top: 54px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 32%;
+    }
+    &__image {
+        width: 100%;
+        max-width: 389px;
+        height: auto;
+    }
+    &__box {
+        padding: 14px 18px 10px;
+        background-color: $colorWhite;
+        min-height: 127px;
+        display: flex;
+        flex-flow: column;
+        justify-content:space-between;
+    }
+    &__desc {
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+    &__date {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        text-align: right;
+    }
+}
+
+// --------------------------------------------------------
 // footer
 // --------------------------------------------------------
 .footer {
