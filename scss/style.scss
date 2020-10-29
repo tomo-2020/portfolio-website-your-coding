@@ -339,6 +339,50 @@
 }
 
 // --------------------------------------------------------
+// works
+// --------------------------------------------------------
+.works {
+    padding-top: 55px;
+    padding-bottom: 90px;
+
+    &-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 68px;
+    }
+    &__item {
+        width: 24%;
+        max-width: 322px;
+        border: 1px solid $colorGlayLight;
+        border-radius: 8px;
+    }
+    &__image {
+        width: 100%;
+        max-width: 322px;
+        height: auto;
+    }
+    &__box {
+        padding: 18px;
+        min-height: 196px;
+    }
+    &__item-desc {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+    &__item-list {
+        margin-top: 30px;
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+}
+
+
+
+// --------------------------------------------------------
 // footer
 // --------------------------------------------------------
 .footer {
