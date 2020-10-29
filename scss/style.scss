@@ -31,12 +31,18 @@
     font-size: 3.2rem;
     line-height: 1.4;
     text-align: center;
+    &--white {
+        color: $colorWhite;
+    }
 }
 .subheading {
     color: $colorGlayBlue;
     font-size: 1.6rem;
     line-height: 1.5;
     margin-top: 10px;
+    &--white {
+        color: $colorWhite;
+    }
 }
 .secondary-heading {
     font-size: 2.8rem;
@@ -312,7 +318,8 @@
         justify-content: space-between;
     }
     &__item {
-        width: 32%;
+        width: 31%;
+        box-shadow: 0 3px 6px $colorGlayHeavy;
     }
     &__image {
         width: 100%;
@@ -380,7 +387,37 @@
     }
 }
 
+// --------------------------------------------------------
+// contact
+// --------------------------------------------------------
+.contact {
+    padding-top: 63px;
+    padding-bottom: 70px;
+    background: linear-gradient(90deg, $colorBlue 0%, $colorGreenBase 100%, $colorGreenLight 100%);
 
+    &__text {
+        margin-top: 36px;
+        color: $colorWhite;
+        text-align: center;
+    }
+    &__box {
+        margin-top: 44px;
+        padding: 31px 62px;
+        background-color: $colorWhite;
+        box-shadow: 0 3px 6px  $colorGlayHeavy;
+    }
+    &__item {
+        &:not(:nth-of-type(1)) {
+            margin-top: 30px;
+        }
+    }
+    &__label {
+        font-size: 1.6rem;
+    }
+    &__text-input {
+        margin-top: 15px;
+    }
+}
 
 // --------------------------------------------------------
 // footer
