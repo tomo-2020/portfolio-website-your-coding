@@ -54,7 +54,7 @@
     font-size: 1.6rem;
     padding: 8px 35px 10px;
     border-radius: 10px;
-    box-shadow: 0 3px 6px #00000029;
+    box-shadow: 0 3px 6px $colorGlayHeavy;
     transition: all 0.3s;
     &:hover {
         opacity: 0.8;
@@ -68,7 +68,7 @@
 .header {
     background-color: $colorWhite;
     width: 100%;
-    box-shadow: 0 3px 6px #00000029;
+    box-shadow: 0 3px 6px $colorGlayHeavy;
     position: fixed;
     z-index: 10;
 
@@ -207,6 +207,45 @@
     }
 }
 
+// --------------------------------------------------------
+// features
+// --------------------------------------------------------
+.price {
+    background-color: $colorBlueLightGlay;
+    padding-top: 55px;
+    padding-bottom: 70px;
+
+    &__table {
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $colorWhite;
+        width: 94%;
+        border: 1px solid $colorGlayBase;
+        box-shadow: 0 3px 6px $colorGlayHeavy;
+    }
+    &__table-heading {
+        font-size: 1.6rem;
+        line-height: 1.7;
+        width: 35%;
+        vertical-align: middle;
+        padding: 19px 30px;
+        border-top: 1px solid $colorGlayBase;
+    }
+    &__table-desc {
+        font-size: 1.6rem;
+        line-height: 1.7;
+        width: 65%;
+        vertical-align: middle;
+        padding: 33px 30px;
+        border-top: 1px solid $colorGlayBase;
+        border-left: 1px solid $colorGlayBase;
+    }
+    &__note {
+        margin-top: 36px;
+        text-align: center;
+    }
+}
 // --------------------------------------------------------
 // footer
 // --------------------------------------------------------

@@ -252,6 +252,47 @@ p {
   margin-top: 40px;
 }
 
+.price {
+  background-color: #eefbfb;
+  padding-top: 55px;
+  padding-bottom: 70px;
+}
+
+.price__table {
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  width: 94%;
+  border: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 3px 6px #00000029;
+          box-shadow: 0 3px 6px #00000029;
+}
+
+.price__table-heading {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  width: 35%;
+  vertical-align: middle;
+  padding: 19px 30px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.price__table-desc {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  width: 65%;
+  vertical-align: middle;
+  padding: 33px 30px;
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+}
+
+.price__note {
+  margin-top: 36px;
+  text-align: center;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
