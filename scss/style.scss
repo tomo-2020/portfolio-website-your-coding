@@ -285,7 +285,6 @@
         &:not(:nth-of-type(1)) {
             border-top: 1px solid $colorGlayBase;
         }
-
     }
     &__box-desc {
         padding: 18px;
@@ -294,7 +293,6 @@
         line-height: 1.9;
         border-top: 1px solid $colorGlayBase;
     }
-
 }
 
 // --------------------------------------------------------
@@ -332,7 +330,7 @@
         min-height: 127px;
         display: flex;
         flex-flow: column;
-        justify-content:space-between;
+        justify-content: space-between;
     }
     &__desc {
         font-size: 1.8rem;
@@ -404,7 +402,7 @@
         margin-top: 44px;
         padding: 31px 62px;
         background-color: $colorWhite;
-        box-shadow: 0 3px 6px  $colorGlayHeavy;
+        box-shadow: 0 3px 6px $colorGlayHeavy;
     }
     &__item {
         &:not(:nth-of-type(1)) {
@@ -414,8 +412,73 @@
     &__label {
         font-size: 1.6rem;
     }
+    &__note {
+        display: inline-block;
+        background-color: $colorDarkBlue;
+        color: $colorWhite;
+        font-size: 1.4rem;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 15px;
+        border-radius: 5px;
+        margin-left: 8px;
+    }
     &__text-input {
-        margin-top: 15px;
+        display: block;
+        margin-top: 10px;
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 6px 12px;
+        border: 1px solid $colorGlayBase;
+        border-radius: 5px;
+    }
+    &__textarea {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        width: 100%;
+        padding: 6px 12px;
+        border: 1px solid $colorGlayBase;
+        border-radius: 5px;
+    }
+    &__checkbox-wrapper {
+        margin-top: 30px;
+        text-align: center;
+    }
+    &__checkbox {
+        display: none;
+
+        &:checked + .contact__checkbox-label {
+            color: $colorDarkBlue;
+        }
+        &:checked + .contact__checkbox-label::before {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            border: 1px solid $colorBlackBase;
+            cursor: pointer;
+        }
+    }
+    &__checkbox-label {
+        font-size: 1.6rem;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            border: 1px solid $colorBlackBase;
+        }
     }
 }
 
