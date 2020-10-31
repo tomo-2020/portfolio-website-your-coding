@@ -90,7 +90,7 @@
         transition: all 0.3s;
         &:hover {
             opacity: 0.7;
-            transition: all 0.5s;
+            transition: all 0.3s;
         }
     }
     &__image {
@@ -180,8 +180,8 @@
 // features
 // --------------------------------------------------------
 .features {
-    padding-top: 71px;
-    padding-bottom: 154px;
+    padding-top: 70px;
+    padding-bottom: 100px;
 
     &__list {
         margin-top: 57px;
@@ -225,8 +225,8 @@
 // --------------------------------------------------------
 .price {
     background-color: $colorBlueLightGlay;
-    padding-top: 55px;
-    padding-bottom: 70px;
+    padding-top: 70px;
+    padding-bottom: 100px;
 
     &__table {
         margin-top: 70px;
@@ -267,8 +267,8 @@
 // faq
 // --------------------------------------------------------
 .faq {
-    padding-top: 55px;
-    padding-bottom: 86px;
+    padding-top: 70px;
+    padding-bottom: 100px;
 
     &__box {
         margin-top: 32px;
@@ -289,6 +289,7 @@
     &__box-desc {
         padding: 18px;
         background-color: $colorLightGlayBase;
+        font-weight: 400;
         font-size: 1.4rem;
         line-height: 1.9;
         border-top: 1px solid $colorGlayBase;
@@ -299,8 +300,8 @@
 // blog
 // --------------------------------------------------------
 .blog {
-    padding-top: 55px;
-    padding-bottom: 91px;
+    padding-top: 70px;
+    padding-bottom: 100px;
     background-color: $colorBlueLightGlay;
 
     &-container {
@@ -347,8 +348,8 @@
 // works
 // --------------------------------------------------------
 .works {
-    padding-top: 55px;
-    padding-bottom: 90px;
+    padding-top: 70px;
+    padding-bottom: 100px;
 
     &-container {
         width: 100%;
@@ -389,8 +390,8 @@
 // contact
 // --------------------------------------------------------
 .contact {
-    padding-top: 63px;
-    padding-bottom: 70px;
+    padding-top: 70px;
+    padding-bottom: 100px;
     background: linear-gradient(90deg, $colorBlue 0%, $colorGreenBase 100%, $colorGreenLight 100%);
 
     &__text {
@@ -406,7 +407,7 @@
     }
     &__item {
         &:not(:nth-of-type(1)) {
-            margin-top: 30px;
+            margin-top: 35px;
         }
     }
     &__label {
@@ -425,19 +426,24 @@
     }
     &__text-input {
         display: block;
-        margin-top: 10px;
+        margin-top: 15px;
+        font-weight: 400;
         font-size: 1.5rem;
         width: 100%;
+        max-width: 856px;
         padding: 6px 12px;
         border: 1px solid $colorGlayBase;
-        border-radius: 5px;
+        border-radius: 4px;
     }
     &__textarea {
         display: block;
-        margin-top: 10px;
+        margin-top: 15px;
+        font-weight: 400;
         font-size: 1.5rem;
         line-height: 1.4;
         width: 100%;
+        max-width: 856px;
+
         padding: 6px 12px;
         border: 1px solid $colorGlayBase;
         border-radius: 5px;
@@ -462,6 +468,7 @@
             left: 0;
             transform: translateY(-45%);
             border: 1px solid $colorBlackBase;
+            border-radius: 3px;
             cursor: pointer;
             background-color: $colorWhite;
         }
@@ -469,15 +476,15 @@
             content: '';
             display: block;
             position: absolute;
-            top: 1px;
+            top: -4px;
             left: 6px;
             width: 7px;
             height: 16px;
             transform: rotate(40deg);
             border-top: none;
             border-left: none;
-            border-bottom: 3px solid $colorDarkBlue;
-            border-right: 3px solid $colorDarkBlue;
+            border-bottom: 3px solid $colorGlayBlue;
+            border-right: 3px solid $colorGlayBlue;
         }
     }
     &__checkbox-label {
@@ -495,6 +502,7 @@
             left: 0;
             transform: translateY(-45%);
             border: 1px solid $colorBlackBase;
+            border-radius: 3px;
         }
     }
     &__submit-wrapper {
@@ -541,7 +549,7 @@
     }
     &__copyright {
         display: block;
-        // font-weight: 400;
+        font-weight: 400;
         font-size: 1.4rem;
     }
 }
