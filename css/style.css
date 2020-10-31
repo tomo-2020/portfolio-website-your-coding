@@ -333,13 +333,38 @@ p {
   font-size: 1.4rem;
   line-height: 1.9;
   text-align: center;
+  position: relative;
+  cursor: pointer;
 }
 
 .faq__box-heading:not(:nth-of-type(1)) {
   border-top: 1px solid #e5e5e5;
 }
 
+.faq__box-heading:after {
+  content: '';
+  position: absolute;
+  right: 30px;
+  top: 30%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 4px solid #0c449b;
+  border-right: 4px solid #0c449b;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.faq__box-heading.faq__box-heading--open:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 45%;
+}
+
 .faq__box-desc {
+  display: none;
   padding: 18px;
   background-color: #f2f2f2;
   font-weight: 400;

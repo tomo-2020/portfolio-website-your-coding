@@ -282,11 +282,34 @@
         font-size: 1.4rem;
         line-height: 1.9;
         text-align: center;
+        position: relative;
+        cursor: pointer;
+
         &:not(:nth-of-type(1)) {
             border-top: 1px solid $colorGlayBase;
         }
+        &:after {
+            //アコーディオンのアイコン
+            content: '';
+            position: absolute;
+            right: 30px;
+            top: 30%;
+            transition: all 0.2s ease-in-out;
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-top: 4px solid $colorDarkBlue;
+            border-right: 4px solid $colorDarkBlue;
+            transform: rotate(135deg);
+        }
+        &.faq__box-heading--open:after {
+            //クリックするとアコーディオンのアイコンが回転する
+            transform: rotate(-45deg);
+            top: 45%;
+        }
     }
     &__box-desc {
+        display: none; // デフォルトでは非表示にしておく（アコーディオンで開閉させる）
         padding: 18px;
         background-color: $colorLightGlayBase;
         font-weight: 400;
@@ -572,3 +595,7 @@
 .fa-angle-up {
     color: $colorWhite;
 }
+
+// --------------------------------------------------------
+// jQuery アコーディオン
+// --------------------------------------------------------
