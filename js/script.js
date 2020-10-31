@@ -24,9 +24,10 @@ jQuery(document).ready(function () {
         $('.hamburger-bottun').on('click', function () {
             $('.hamburger-bottun').toggleClass('js-hamburger-bottun--close');
             $('.header__sp-navi-wrapper').fadeToggle(500);
-            $('.body').toggleClass('js-body--noscroll');// ナビ表示時のスクロールを防ぐ
-            $('.header__sp-navi a[href]').off('click')// ボタンクリックの繰り返しを防ぐ
-            $('.header__sp-navi a[href]').on('click', function (event) {// ナビをクリックした際にナビが閉じる
+            $('.body').toggleClass('js-body--noscroll'); // ナビ表示時のスクロールを防ぐ
+            $('.header__sp-navi a[href]').off('click'); // ボタンクリックの繰り返しを防ぐ
+            $('.header__sp-navi a[href]').on('click', function (event) {
+                // ナビをクリックした際にナビが閉じる
                 $('.hamburger-bottun').trigger('click');
             });
         });
@@ -44,10 +45,10 @@ jQuery(document).ready(function () {
         });
     });
 
-    // スムーズスクロール トップへ戻る
+    // スクロールトップ
     $(function () {
         var pagetop = $('#js-scroll-top');
-        pagetop.hide();// ボタン非表示
+        pagetop.hide(); // デフォルトの状態ではボタンを非表示にしておく
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
                 pagetop.fadeIn();
@@ -76,8 +77,8 @@ jQuery(document).ready(function () {
     // アコーディオン
     $(function ($) {
         $('.js-active').on('click', function () {
-            $(this).next().slideToggle(200);// クリックでコンテンツを開閉
-            $(this).toggleClass('open', 200);// 矢印の向きを変更
+            $(this).next().slideToggle(200); // クリックでコンテンツを開閉
+            $(this).toggleClass('open', 200); // 矢印の向きを変更
         });
     });
 });
