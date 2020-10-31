@@ -553,3 +553,22 @@
         font-size: 1.4rem;
     }
 }
+
+// --------------------------------------------------------
+// jQuery スクロールトップ
+// --------------------------------------------------------
+#js-scroll-top {
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+}
+.js-scroll-top__link {
+    background-color: $colorDarkBlue;
+    color: $colorWhite;
+    font-size: 35px;
+    padding: 8px 18px 10px;
+    border-radius: 4px;
+}
+.fa-angle-up {
+    color: $colorWhite;
+}
