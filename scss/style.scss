@@ -13,7 +13,7 @@
 .body-inner {
     //コンテンツが少ない場合にfooterを最下部に固定する
     position: relative;
-    padding-bottom: 244px; //footerの高さ
+    padding-bottom: 100px; //footerの高さ
     min-height: 100vh;
 }
 .wrapper {
@@ -31,12 +31,18 @@
     font-size: 3.2rem;
     line-height: 1.4;
     text-align: center;
+    &--white {
+        color: $colorWhite;
+    }
 }
 .subheading {
     color: $colorGlayBlue;
     font-size: 1.6rem;
     line-height: 1.5;
     margin-top: 10px;
+    &--white {
+        color: $colorWhite;
+    }
 }
 .secondary-heading {
     font-size: 2.8rem;
@@ -109,7 +115,7 @@
         }
     }
     &__link {
-        transition: all 0.5s;
+        transition: all 0.3s;
         &:hover {
             color: $colorGlayBlue;
             transition: all 0.3s;
@@ -279,7 +285,6 @@
         &:not(:nth-of-type(1)) {
             border-top: 1px solid $colorGlayBase;
         }
-
     }
     &__box-desc {
         padding: 18px;
@@ -288,7 +293,6 @@
         line-height: 1.9;
         border-top: 1px solid $colorGlayBase;
     }
-
 }
 
 // --------------------------------------------------------
@@ -312,7 +316,8 @@
         justify-content: space-between;
     }
     &__item {
-        width: 32%;
+        width: 31%;
+        box-shadow: 0 3px 6px $colorGlayHeavy;
     }
     &__image {
         width: 100%;
@@ -325,7 +330,7 @@
         min-height: 127px;
         display: flex;
         flex-flow: column;
-        justify-content:space-between;
+        justify-content: space-between;
     }
     &__desc {
         font-size: 1.8rem;
@@ -380,12 +385,163 @@
     }
 }
 
+// --------------------------------------------------------
+// contact
+// --------------------------------------------------------
+.contact {
+    padding-top: 63px;
+    padding-bottom: 70px;
+    background: linear-gradient(90deg, $colorBlue 0%, $colorGreenBase 100%, $colorGreenLight 100%);
 
+    &__text {
+        margin-top: 36px;
+        color: $colorWhite;
+        text-align: center;
+    }
+    &__box {
+        margin-top: 44px;
+        padding: 31px 62px;
+        background-color: $colorWhite;
+        box-shadow: 0 3px 6px $colorGlayHeavy;
+    }
+    &__item {
+        &:not(:nth-of-type(1)) {
+            margin-top: 30px;
+        }
+    }
+    &__label {
+        font-size: 1.6rem;
+    }
+    &__note {
+        display: inline-block;
+        background-color: $colorDarkBlue;
+        color: $colorWhite;
+        font-size: 1.4rem;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 15px;
+        border-radius: 5px;
+        margin-left: 8px;
+    }
+    &__text-input {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 6px 12px;
+        border: 1px solid $colorGlayBase;
+        border-radius: 5px;
+    }
+    &__textarea {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        width: 100%;
+        padding: 6px 12px;
+        border: 1px solid $colorGlayBase;
+        border-radius: 5px;
+    }
+    &__checkbox-wrapper {
+        margin-top: 30px;
+        text-align: center;
+    }
+    &__checkbox {
+        display: none;
+
+        // &:checked + .contact__checkbox-label {
+        //     color: $colorDarkBlue;
+        // }
+        &:checked + .contact__checkbox-label::before {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-45%);
+            border: 1px solid $colorBlackBase;
+            cursor: pointer;
+            background-color: $colorWhite;
+        }
+        &:checked + .contact__checkbox-label::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 1px;
+            left: 6px;
+            width: 7px;
+            height: 16px;
+            transform: rotate(40deg);
+            border-top: none;
+            border-left: none;
+            border-bottom: 3px solid $colorDarkBlue;
+            border-right: 3px solid $colorDarkBlue;
+        }
+    }
+    &__checkbox-label {
+        font-size: 1.6rem;
+        padding-left: 20px;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-45%);
+            border: 1px solid $colorBlackBase;
+        }
+    }
+    &__submit-wrapper {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
 
 // --------------------------------------------------------
 // footer
 // --------------------------------------------------------
 .footer {
-    position: absolute;
-    bottom: 0;
+    width: 100%;
+    position: absolute; //コンテンツが少ない場合にfooterを最下部に固定する
+    bottom: 0; //コンテンツが少ない場合にfooterを最下部に固定する
+
+    &__inner {
+        padding: 30px 0;
+        width: 100%;
+        height: 100px;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        font-size: 1.6rem;
+        transition: all 0.3s;
+
+        &:not(:nth-of-type(1)) {
+            margin-left: 25px;
+        }
+    }
+    &__link {
+        transition: all 0.3s;
+        &:hover {
+            color: $colorGlayBlue;
+            transition: all 0.3s;
+        }
+    }
+    &__copyright-wrapper {
+        margin-top: 15px;
+        text-align: center;
+    }
+    &__copyright {
+        display: block;
+        // font-weight: 400;
+        font-size: 1.4rem;
+    }
 }
