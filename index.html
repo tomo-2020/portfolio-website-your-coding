@@ -415,7 +415,7 @@
                             <span class="subheading subheading--white">CONTACT</span>
                         </h2>
                         <p class="contact__text">コーディングの人出が足りないとき、 あなたの力になります</p>
-                        <form class="contact__box">
+                        <form class="contact__box" action="comfirm" method="post">
                             <ul class="contact__list">
                                 <li class="contact__item">
                                     <label for="yourname" class="contact__label">
@@ -455,22 +455,29 @@
             <!-- footer -->
             <footer class="footer">
                 <div class="container">
-                    <h2 class="primary-heading">ユアコーディング</h2>
-                    <ul class="footer__list">
-                        <li class="footer__item">プライバシーポリシー</li>
-                        <li class="footer__item">個人商取引法に基づく表記</li>
-                    </ul>
-                    <small class="footer__copyright">&#169;ユアコーディング, All Rights Reserved.</small>
+                    <div class="footer__inner">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#!" class="footer__link">プライバシーポリシー</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#!" class="footer__link">個人商取引法に基づく表記</a>
+                            </li>
+                        </ul>
+                        <div class="footer__copyright-wrapper">
+                            <small class="footer__copyright">&#169;ユアコーディング, All Rights Reserved.</small>
+                        </div>
+                    </div>
                 </div>
             </footer>
             <!-- /footer -->
 
             <!-- jQuery スムーズスクロール トップへ戻る -->
-            <div id="js-scroll-top">
+            <!-- <div id="js-scroll-top">
                 <a href="#" class="js-scroll-top__link">
                     <i class="fas fa-angle-up"></i>
                 </a>
-            </div>
+            </div> -->
             <!-- /jQuery スムーズスクロール トップへ戻る -->
 
             <!-- jqueryの読み込み -->
