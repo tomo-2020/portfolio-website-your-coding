@@ -104,6 +104,9 @@
     &__global-navi {
         display: flex;
         margin-left: 14%;
+        @include tab {
+            display: none;
+        }
     }
     &__list {
         display: flex;
@@ -123,6 +126,9 @@
     }
     &__button-wrapper {
         margin-left: auto;
+        @include tab {
+            display: none;
+        }
     }
 }
 
@@ -221,7 +227,7 @@
 }
 
 // --------------------------------------------------------
-// features
+// price
 // --------------------------------------------------------
 .price {
     background-color: $colorBlueLightGlay;
@@ -340,6 +346,7 @@
         justify-content: space-between;
     }
     &__item {
+        background-color: $colorWhite;
         width: 31%;
         box-shadow: 0 3px 6px $colorGlayHeavy;
     }
@@ -601,5 +608,101 @@
 }
 
 // --------------------------------------------------------
-// jQuery アコーディオン
+// jQuery スマホ用ヘッダーコンテンツ ハンバーガーメニュー
 // --------------------------------------------------------
+.js-body--noscroll {
+    overflow: hidden;
+}
+.header {
+    &__sp-content {
+        display: none;
+        @include tab {
+            display: block;
+        }
+    }
+    &__sp-navi-wrapper {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    &__sp-navi {
+        width: 100%;
+        height: 100%;
+        background-color: $colorBlueLightGlay;
+        z-index: 2;
+    }
+    &__sp-navi-list {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__sp-navi-item {
+        margin-right: 0;
+        margin-bottom: 40px;
+
+        color: $colorBlackBase;
+        // font-style: italic;
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+}
+
+.hamburger-bottun {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 3;
+    transition: all 0.5s;
+    @include sp {
+        right: 4%;
+    }
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.5s;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 3px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $colorDarkBlue;
+    }
+    &__icon--top {
+        top: 10px;
+    }
+    &__icon--middle {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__icon--bottom {
+        bottom: 9px;
+    }
+
+    &.js-hamburger-bottun--close .hamburger-bottun__icon--top {
+        transform: translate(-50%, 8px) rotate(45deg);
+        transition: 0.5s;
+    }
+    &.js-hamburger-bottun--close .hamburger-bottun__icon--middle {
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    &.js-hamburger-bottun--close .hamburger-bottun__icon--bottom {
+        transform: translate(-50%, -9px) rotate(-45deg);
+        transition: 0.5s;
+    }
+}

@@ -34,16 +34,16 @@ jQuery(document).ready(function () {
     });
 
     // slickスライダー hero部分
-    $(function () {
-        $('.js-hero-slick').slick({
-            autoplay: true, // 自動再生
-            autoplaySpeed: 2000, // 画像を表示している時間
-            speed: 1000, // 切り替え時の時間
-            fade: true, // 画像の切り替えをフェードイン・フェードアウトにさせる
-            cssEase: 'linear', // 画像切り替え時のイージングを CSS3 Animation Easing で指定
-            dots: true, // ドットインジケータの表示
-        });
-    });
+    // $(function () {
+    //     $('.js-hero-slick').slick({
+    //         autoplay: true, // 自動再生
+    //         autoplaySpeed: 2000, // 画像を表示している時間
+    //         speed: 1000, // 切り替え時の時間
+    //         fade: true, // 画像の切り替えをフェードイン・フェードアウトにさせる
+    //         cssEase: 'linear', // 画像切り替え時のイージングを CSS3 Animation Easing で指定
+    //         dots: true, // ドットインジケータの表示
+    //     });
+    // });
 
     // スクロールトップ
     $(function () {
