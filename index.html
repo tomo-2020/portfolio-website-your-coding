@@ -19,6 +19,9 @@
         <!-- javascript Swiiperスライダーの読み込み -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 
+        <!-- javascript AOSスクロールアニメーションの読み込み -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
         <title>ユアコーディング ＜ポートフォリオ＞</title>
         <meta name="description" content="ユアコーディング ＜ポートフォリオ＞です。" />
 
@@ -163,12 +166,12 @@
                 <!-- features -->
                 <section class="features" id="features">
                     <div class="container">
-                        <h2 class="primary-heading">
+                        <h2 class="primary-heading" data-aos="fade-in">
                             ユアコーディング3つの特徴<br />
                             <span class="subheading">FEATURES</span>
                         </h2>
                         <ul class="features__list">
-                            <li class="features__item">
+                            <li class="features__item" data-aos="fade-in">
                                 <h3 class="secondary-heading">高速コーディング</h3>
                                 <div class="features__box">
                                     <div class="features__image-wrapper">
@@ -186,7 +189,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="features__item">
+                            <li class="features__item" data-aos="fade-in">
                                 <h3 class="secondary-heading">高品質</h3>
                                 <div class="features__box">
                                     <div class="features__image-wrapper">
@@ -212,7 +215,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="features__item">
+                            <li class="features__item" data-aos="fade-in">
                                 <h3 class="secondary-heading">迅速なレスポンス</h3>
                                 <div class="features__box">
                                     <div class="features__image-wrapper">
@@ -236,11 +239,11 @@
                 <!-- price -->
                 <section class="price" id="price">
                     <div class="container">
-                        <h2 class="primary-heading">
+                        <h2 class="primary-heading" data-aos="fade-in">
                             価格<br />
                             <span class="subheading">PRICE</span>
                         </h2>
-                        <table class="price__table">
+                        <table class="price__table" data-aos="fade-in">
                             <tbody class="price__table-inner">
                                 <tr class="price__table-row">
                                     <th class="price__table-heading">HTMLコーディングトップページ</th>
@@ -260,7 +263,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <p class="price__note">＊詳細な価格はページや仕様によって異なります</p>
+                        <p class="price__note" data-aos="fade-in">＊詳細な価格はページや仕様によって異なります</p>
                     </div>
                 </section>
                 <!-- /price -->
@@ -268,11 +271,11 @@
                 <!-- faq -->
                 <section class="faq">
                     <div class="container">
-                        <h2 class="primary-heading">
+                        <h2 class="primary-heading" data-aos="fade-in">
                             よくある質問<br />
                             <span class="subheading">FAQ</span>
                         </h2>
-                        <dl class="faq__box">
+                        <dl class="faq__box" data-aos="fade-in">
                             <dt class="faq__box-heading js-accodion-heading">デザインから一貫してお願いすることは可能でしょうか？</dt>
                             <dd class="faq__box-desc js-accodion-desc">
                                 ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。<br />
@@ -290,11 +293,11 @@
                 <!-- blog -->
                 <section class="blog">
                     <div class="blog-container">
-                        <h2 class="primary-heading">
+                        <h2 class="primary-heading" data-aos="fade-in">
                             ブログ<br />
                             <span class="subheading">BLOG</span>
                         </h2>
-                        <ul class="blog__list">
+                        <ul class="blog__list" data-aos="fade-in">
                             <li class="blog__item">
                                 <p class="blog__image-wrapper">
                                     <img
@@ -354,12 +357,12 @@
                 <!-- works -->
                 <section class="works">
                     <div class="works-container">
-                        <h2 class="primary-heading">
+                        <h2 class="primary-heading" data-aos="fade-in">
                             制作実績<br />
                             <span class="subheading">WORKS</span>
                         </h2>
                         <!-- Swiperスライダー -->
-                        <div class="swiper-container">
+                        <div class="swiper-container" data-aos="fade-in">
                             <div class="swiper-wrapper">
                                 <!-- スライダーコンテンツ（３つ） -->
                                 <div class="swiper-slide">
@@ -514,12 +517,12 @@
                 <!-- contact-->
                 <section class="contact" id="contact">
                     <div class="container">
-                        <h2 class="primary-heading primary-heading--white">
+                        <h2 class="primary-heading primary-heading--white" data-aos="fade-in">
                             お問い合わせ<br />
                             <span class="subheading subheading--white">CONTACT</span>
                         </h2>
-                        <p class="contact__text">コーディングの人出が足りないとき、 あなたの力になります</p>
-                        <form class="contact__box" action="comfirm" method="post">
+                        <p class="contact__text" data-aos="fade-in">コーディングの人出が足りないとき、 あなたの力になります</p>
+                        <form class="contact__box" action="comfirm" method="post" data-aos="fade-in">
                             <ul class="contact__list">
                                 <li class="contact__item">
                                     <label for="yourname" class="contact__label">
@@ -589,6 +592,21 @@
 
             <!-- javascript Swiperスライダー の読み込み -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+
+            <!-- javascript AOSスクロールアニメーションの読み込み -->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+            <!-- javascript AOSスクロールアニメーションの初期化・設定 -->
+            <script>
+                AOS.init({
+                    offset: 200, //スクロール画面下部からの距離（発動のタイミング）を設定
+                    duration: 400, //アニメーションスピード
+                    easing: 'ease-in-sine', //イージング
+                    delay: 100, //発火タイミングの遅延
+                    disable: 'mobile', //モバイル端末では発動しない
+                    disable: window.innerWidth < 897, //画面幅が●●px未満では発動しない
+                });
+            </script>
 
             <!-- javascript jsファイルの読み込み -->
             <script type="text/javascript" src="js/script.js"></script>
