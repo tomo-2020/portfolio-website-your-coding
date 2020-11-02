@@ -107,9 +107,6 @@
                         <div class="header__sp-navi-wrapper">
                             <nav id="header__sp-navi" class="header__sp-navi">
                                 <ul class="header__sp-navi-list">
-                                    <!-- <li class="header__sp-navi-item">
-                                        <a href="../#concept" class="header__link">Concept</a>
-                                    </li> -->
                                     <li class="header__sp-navi-item">
                                         <a href="#features">特徴</a>
                                     </li>
@@ -130,6 +127,7 @@
                             <span class="hamburger-bottun__icon hamburger-bottun__icon--bottom"></span>
                         </button>
                         <!-- /humburgerボタン -->
+                        <div class="black-bg" id="js-black-bg"></div>
                     </div>
                     <!-- /スマホ用コンテンツ -->
                 </div>
@@ -142,13 +140,13 @@
                     <div class="hero__container">
                         <div class="hero__text-box">
                             <p class="hero__catchcopy">
-                                コーディングの手間を<br class="br-pc" />
-                                最小に、デザインに注力<br class="br-pc" />する助けに
+                                コーディングの手間を<br class="br--unvisible" />
+                                最小に、デザインに注力<br class="br--unvisible" />する助けに
                             </p>
                             <p class="hero__desc">
-                                ユアコーディングはコーディングに<br class="br-pc" />
-                                特化したフリーランス<br class="br-pc" />
-                                デザインに注力されたい方の<br class="br-pc" />
+                                ユアコーディングはコーディングに<br class="br--unvisible" />
+                                特化したフリーランス<br />
+                                デザインに注力されたい方の<br class="br--unvisible" />
                                 助けになります
                             </p>
                             <div class="hero__button-wrapper">
@@ -178,8 +176,8 @@
                                     </div>
                                     <div class="features__text-block">
                                         <h4 class="tertiary-heading">
-                                            コーディングに特化した<br />
-                                            フリーランスのため、<br />
+                                            コーディングに特化した<br class="br--unvisible" />
+                                            フリーランスのため、<br class="br--unvisible" />
                                             スピード感を持った開発が可能。
                                         </h4>
                                         <p class="features__desc">
@@ -204,8 +202,8 @@
                                     </div>
                                     <div class="features__text-block">
                                         <h4 class="tertiary-heading">
-                                            正しいマークアップで、<br />
-                                            内部SEOに強いコーディングを<br />
+                                            正しいマークアップで、<br class="br--unvisible" />
+                                            内部SEOに強いコーディングを<br class="br--unvisible" />
                                             デフォルトで行います。
                                         </h4>
                                         <p class="features__desc">
@@ -222,8 +220,8 @@
                                     </div>
                                     <div class="features__text-block">
                                         <h4 class="tertiary-heading">
-                                            原則いただいたメッセージは、<br />
-                                            業務時間内であれば6時間以内に<br />
+                                            原則いただいたメッセージは、<br class="br--unvisible" />
+                                            業務時間内であれば6時間以内に<br class="br--unvisible" />
                                             お返しいたします。
                                         </h4>
                                         <p class="features__desc">連絡を返さないフリーランスが多い中、ユアコーディングでは定期的な進捗報告など、社会人としての基本を踏まえて仕事を行なっております。</p>
@@ -243,22 +241,24 @@
                             <span class="subheading">PRICE</span>
                         </h2>
                         <table class="price__table">
-                            <tr class="price__table-row">
-                                <th class="price__table-heading">HTMLコーディングトップページ</th>
-                                <td class="price__table-desc">30.000円〜</td>
-                            </tr>
-                            <tr class="price__table-row">
-                                <th class="price__table-heading">HTMLコーディング下層1ページ</th>
-                                <td class="price__table-desc">10.000円〜</td>
-                            </tr>
-                            <tr class="price__table-row">
-                                <th class="price__table-heading">HTML+WordPressトップページ</th>
-                                <td class="price__table-desc">55.000円〜</td>
-                            </tr>
-                            <tr class="price__table-row">
-                                <th class="price__table-heading">HTML+WordPress下層1ページ</th>
-                                <td class="price__table-desc">15.000円〜</td>
-                            </tr>
+                            <tbody class="price__table-inner">
+                                <tr class="price__table-row">
+                                    <th class="price__table-heading">HTMLコーディングトップページ</th>
+                                    <td class="price__table-desc">30.000円〜</td>
+                                </tr>
+                                <tr class="price__table-row">
+                                    <th class="price__table-heading">HTMLコーディング下層1ページ</th>
+                                    <td class="price__table-desc">10.000円〜</td>
+                                </tr>
+                                <tr class="price__table-row">
+                                    <th class="price__table-heading">HTML+WordPressトップページ</th>
+                                    <td class="price__table-desc">55.000円〜</td>
+                                </tr>
+                                <tr class="price__table-row">
+                                    <th class="price__table-heading">HTML+WordPress下層1ページ</th>
+                                    <td class="price__table-desc">15.000円〜</td>
+                                </tr>
+                            </tbody>
                         </table>
                         <p class="price__note">＊詳細な価格はページや仕様によって異なります</p>
                     </div>
@@ -278,7 +278,7 @@
                                 ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。<br />
                                 ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。
                             </dd>
-                            <dt class="faq__box-heading js-accodion-heading">WordPressのカスタマイズをお願いすることも可能でしょうか？</dt>
+                            <dt class="faq__box-heading js-accodion-heading">WordPressのカスタマイズを<br class="br--visible" />お願いすることも可能でしょうか？</dt>
                             <dd class="faq__box-desc js-accodion-desc">可能です。ただECサイトなどの場合は構築難易度や工数の関係で綿密にヒアリングさせていただきたく思います。</dd>
                             <dt class="faq__box-heading js-accodion-heading">コーディングのスピード感が知りたい</dt>
                             <dd class="faq__box-desc js-accodion-desc">HTMLレスポンシブ込み5ページで1週間、10ページで2週間、WordPressサイト5ページで2週間、10ページで3週間が目安に なります。</dd>
@@ -296,67 +296,55 @@
                         </h2>
                         <ul class="blog__list">
                             <li class="blog__item">
-                                <figure class="blog__item-inner">
-                                    <div class="blog__image-wrapper">
-                                        <img
-                                            src="./image/austin-distel-wawEfYdpkag-unsplash.png"
-                                            srcset="./image/austin-distel-wawEfYdpkag-unsplash.png 1x, ./image/austin-distel-wawEfYdpkag-unsplash@2x.png 2x"
-                                            loading="lazy"
-                                            width="389"
-                                            height="260"
-                                            alt=""
-                                            class="blog__image"
-                                        />
-                                    </div>
-                                    <div class="blog__box">
-                                        <figcaption class="blog__desc">サイトをリニューアルオープンしました。</figcaption>
-                                        <p class="blog__date">
-                                            <time datetime="2020-01-23">2020.01.23</time>
-                                        </p>
-                                    </div>
-                                </figure>
+                                <p class="blog__image-wrapper">
+                                    <img
+                                        src="./image/austin-distel-wawEfYdpkag-unsplash.png"
+                                        srcset="./image/austin-distel-wawEfYdpkag-unsplash.png 1x, ./image/austin-distel-wawEfYdpkag-unsplash@2x.png 2x"
+                                        loading="lazy"
+                                        width="389"
+                                        height="260"
+                                        alt=""
+                                        class="blog__image"
+                                    />
+                                </p>
+                                <p class="blog__desc">サイトをリニューアルオープンしました。</p>
+                                <p class="blog__date">
+                                    <time datetime="2020-01-23">2020.01.23</time>
+                                </p>
                             </li>
                             <li class="blog__item">
-                                <figure class="blog__item-inner">
-                                    <div class="blog__image-wrapper">
-                                        <img
-                                            src="./image/dylan-gillis-KdeqA3aTnBY-unsplash.png"
-                                            srcset="./image/dylan-gillis-KdeqA3aTnBY-unsplash.png 1x, ./image/dylan-gillis-KdeqA3aTnBY-unsplash@2x.png 2x"
-                                            loading="lazy"
-                                            width="389"
-                                            height="260"
-                                            alt=""
-                                            class="blog__image"
-                                        />
-                                    </div>
-                                    <div class="blog__box">
-                                        <figcaption class="blog__desc">WebサイトでSEO内部施策に適したコー ディングでどれぐらいサイトが早くなるの か検証してみました</figcaption>
-                                        <p class="blog__date">
-                                            <time datetime="2020-01-24">2020.01.24</time>
-                                        </p>
-                                    </div>
-                                </figure>
+                                <p class="blog__image-wrapper">
+                                    <img
+                                        src="./image/dylan-gillis-KdeqA3aTnBY-unsplash.png"
+                                        srcset="./image/dylan-gillis-KdeqA3aTnBY-unsplash.png 1x, ./image/dylan-gillis-KdeqA3aTnBY-unsplash@2x.png 2x"
+                                        loading="lazy"
+                                        width="389"
+                                        height="260"
+                                        alt=""
+                                        class="blog__image"
+                                    />
+                                </p>
+                                <p class="blog__desc">WebサイトでSEO内部施策に適したコー ディングでどれぐらいサイトが早くなるの か検証してみました</p>
+                                <p class="blog__date">
+                                    <time datetime="2020-01-24">2020.01.24</time>
+                                </p>
                             </li>
                             <li class="blog__item">
-                                <figure class="blog__item-inner">
-                                    <div class="blog__image-wrapper">
-                                        <img
-                                            src="./image/brooke-cagle-g1Kr4Ozfoac-unsplash.png"
-                                            srcset="./image/brooke-cagle-g1Kr4Ozfoac-unsplash.png 1x, ./image/brooke-cagle-g1Kr4Ozfoac-unsplash@2x.png 2x"
-                                            loading="lazy"
-                                            width="389"
-                                            height="260"
-                                            alt=""
-                                            class="blog__image"
-                                        />
-                                    </div>
-                                    <div class="blog__box">
-                                        <figcaption class="blog__desc">ユアコーディングではデザイナーの方を 広く募集しています。</figcaption>
-                                        <p class="blog__date">
-                                            <time datetime="2020-01-25">2020.01.25</time>
-                                        </p>
-                                    </div>
-                                </figure>
+                                <p class="blog__image-wrapper">
+                                    <img
+                                        src="./image/brooke-cagle-g1Kr4Ozfoac-unsplash.png"
+                                        srcset="./image/brooke-cagle-g1Kr4Ozfoac-unsplash.png 1x, ./image/brooke-cagle-g1Kr4Ozfoac-unsplash@2x.png 2x"
+                                        loading="lazy"
+                                        width="389"
+                                        height="260"
+                                        alt=""
+                                        class="blog__image"
+                                    />
+                                </p>
+                                <p class="blog__desc">ユアコーディングではデザイナーの方を 広く募集しています。</p>
+                                <p class="blog__date">
+                                    <time datetime="2020-01-25">2020.01.25</time>
+                                </p>
                             </li>
                         </ul>
                     </div>
