@@ -26,6 +26,21 @@
     margin: 0 auto;
     padding-left: 21px;
     padding-right: 21px;
+    @include sp {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+.br--unvisible {
+    @include tab {
+        display: none;
+    }
+}
+.br--visible {
+    display: none;
+    @include tab {
+        display: block;
+    }
 }
 .primary-heading {
     font-size: 3.2rem;
@@ -33,6 +48,9 @@
     text-align: center;
     &--white {
         color: $colorWhite;
+    }
+    @include sp {
+        font-size: 2.6rem;
     }
 }
 .subheading {
@@ -43,15 +61,26 @@
     &--white {
         color: $colorWhite;
     }
+    @include sp {
+        font-size: 1.4rem;
+        margin-top: 8px;
+    }
 }
 .secondary-heading {
     font-size: 2.8rem;
     line-height: 1.4;
     text-align: center;
+    @include sp {
+        font-size: 2.2rem;
+    }
 }
 .tertiary-heading {
     font-size: 2.4rem;
     line-height: 2;
+    @include sp {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
 }
 .button {
     display: inline-block;
@@ -82,6 +111,9 @@
         display: flex;
         height: 94px;
         align-items: center;
+        @include sp {
+            height: 74px;
+        }
     }
     &__logo-link {
         display: inline-block;
@@ -94,16 +126,27 @@
         }
     }
     &__image {
+        width: 47px;
+        height: auto;
         vertical-align: middle;
+        @include sp {
+            width: 38px;
+        }
     }
     &__title {
         font-size: 24px;
         vertical-align: middle;
         margin-left: 16px;
+        @include sp {
+            font-size: 20px;
+        }
     }
     &__global-navi {
         display: flex;
         margin-left: 14%;
+        @include tab {
+            display: none;
+        }
     }
     &__list {
         display: flex;
@@ -123,6 +166,9 @@
     }
     &__button-wrapper {
         margin-left: auto;
+        @include tab {
+            display: none;
+        }
     }
 }
 
@@ -131,11 +177,19 @@
 // --------------------------------------------------------
 .hero {
     background-image: url(../image/bg-round.svg);
-    background-size: 700px auto;
-    background-position: 705px 0;
+    background-size: 740px auto;
+    background-position: 114% -40px;
     background-repeat: no-repeat;
     height: 768px;
     padding-top: 94px;
+    @include tab {
+        background-position: 114% -140px;
+        height: 650px;
+    }
+    @include sp {
+        padding-top: 74px;
+        height: 600px;
+    }
 
     &__container {
         width: 100%;
@@ -145,23 +199,59 @@
         padding-right: 21px;
         display: flex;
         position: relative;
+        @include tab {
+            flex-direction: column-reverse;
+        }
+        @include sp {
+            padding-left: 4%;
+            padding-right: 4%;
+        }
     }
     &__text-box {
         width: 360px;
         margin-top: 159px;
+        @include pc {
+            margin-left: 60px;
+        }
+        @include tab {
+            width: 465px;
+            margin: -15px auto 0;
+            z-index: 2;
+        }
+        @include sp {
+            width: 100%;
+            margin: 0 auto 0;
+        }
     }
     &__catchcopy {
         font-size: 3.2rem;
         line-height: 1.4;
+        @include sp {
+            font-size: 2.6rem;
+        }
     }
     &__desc {
         font-size: 1.6rem;
         line-height: 1.5;
         width: 260px;
         margin-top: 44px;
+        @include tab {
+            width: 100%;
+            margin-top: 35px;
+        }
+        @include sp {
+            font-size: 1.5rem;
+        }
     }
     &__button-wrapper {
         margin-top: 53px;
+        @include tab {
+            margin: 30px auto 0;
+            width: 166px;
+        }
+        @include sp {
+            margin: 20px auto 0;
+        }
     }
     &__image-wrapper {
         // margin-left: 13%;
@@ -169,6 +259,16 @@
         top: 25%;
         right: 4%;
         // transform: translateY(-50%);
+        @include tab {
+            position: static;
+            width: 55%;
+            min-width: 400px;
+            margin: -15px auto 0;
+        }
+        @include sp {
+            width: 90%;
+            min-width: 100px;
+        }
     }
     &__image {
         max-width: 100%;
@@ -182,6 +282,12 @@
 .features {
     padding-top: 70px;
     padding-bottom: 100px;
+    @include tab {
+        padding-top: 120px;
+    }
+    @include sp {
+        padding-bottom: 80px;
+    }
 
     &__list {
         margin-top: 57px;
@@ -189,22 +295,39 @@
     &__item {
         &:not(:nth-of-type(1)) {
             margin-top: 100px;
+            @include sp {
+                margin-top: 70px;
+            }
         }
         &:nth-child(2n) .features__box {
             flex-flow: row-reverse;
+            @include sp {
+                flex-direction: column;
+                margin-top: 40px;
+            }
         }
         &:nth-child(2n) .features__image-wrapper {
             margin-left: 5%;
             margin-right: 0;
+            @include sp {
+                margin-left: initial;
+            }
         }
     }
     &__box {
         display: flex;
         align-items: center;
         margin-top: 60px;
+        @include sp {
+            flex-direction: column;
+            margin-top: 40px;
+        }
     }
     &__image-wrapper {
         margin-right: 5%;
+        @include sp {
+            margin-right: initial;
+        }
     }
     &__image {
         max-width: 100%;
@@ -213,20 +336,34 @@
     &__text-block {
         max-width: 46%;
         margin-left: auto;
+        @include sp {
+            max-width: 100%;
+            margin-top: 30px;
+        }
     }
     &__desc {
+        text-align: justify;
+        text-justify: inter-ideograph;
         line-height: 1.6;
         margin-top: 40px;
+        @include sp {
+            font-weight: 400;
+            margin-top: 30px;
+        }
     }
 }
 
 // --------------------------------------------------------
-// features
+// price
 // --------------------------------------------------------
 .price {
     background-color: $colorBlueLightGlay;
     padding-top: 70px;
     padding-bottom: 100px;
+    @include sp {
+        padding-top: 55px;
+        padding-bottom: 80px;
+    }
 
     &__table {
         margin-top: 70px;
@@ -236,6 +373,9 @@
         width: 94%;
         border: 1px solid $colorGlayBase;
         box-shadow: 0 3px 6px $colorGlayHeavy;
+        @include sp {
+            margin-top: 35px;
+        }
     }
     &__table-row {
         &:not(:nth-of-type(1)) {
@@ -248,6 +388,10 @@
         width: 35%;
         vertical-align: middle;
         padding: 19px 30px;
+        @include sp {
+            font-size: 1.4rem;
+            padding: 15px 24px;
+        }
     }
     &__table-desc {
         font-size: 1.6rem;
@@ -256,10 +400,18 @@
         vertical-align: middle;
         padding: 33px 30px;
         border-left: 1px solid $colorGlayBase;
+        @include sp {
+            font-size: 1.4rem;
+            padding: 15px 24px;
+        }
     }
     &__note {
         margin-top: 36px;
+        line-height: 1.4;
         text-align: center;
+        @include sp {
+            font-size: 1.4rem;
+        }
     }
 }
 
@@ -269,6 +421,10 @@
 .faq {
     padding-top: 70px;
     padding-bottom: 100px;
+    @include sp {
+        padding-top: 55px;
+        padding-bottom: 80px;
+    }
 
     &__box {
         margin-top: 32px;
@@ -284,6 +440,9 @@
         text-align: center;
         position: relative;
         cursor: pointer;
+        @include sp {
+            padding-right: 65px;
+        }
 
         &:not(:nth-of-type(1)) {
             border-top: 1px solid $colorGlayBase;
@@ -326,6 +485,10 @@
     padding-top: 70px;
     padding-bottom: 100px;
     background-color: $colorBlueLightGlay;
+    @include sp {
+        padding-top: 55px;
+        padding-bottom: 80px;
+    }
 
     &-container {
         width: 100%;
@@ -333,37 +496,63 @@
         margin: 0 auto;
         padding-left: 21px;
         padding-right: 21px;
+        @include sp {
+            padding-left: 4%;
+            padding-right: 4%;
+        }
     }
     &__list {
         margin-top: 54px;
         display: flex;
         justify-content: space-between;
+        @include sp {
+            flex-direction: column;
+        }
     }
     &__item {
+        background-color: $colorWhite;
         width: 31%;
         box-shadow: 0 3px 6px $colorGlayHeavy;
+        display: flex;
+        flex-direction: column;
+        @include sp {
+            width: 100%;
+            max-width: 389px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &:not(:nth-of-type(1)) {
+            @include sp {
+                margin-top: 35px;
+            }
+        }
     }
     &__image {
         width: 100%;
         max-width: 389px;
         height: auto;
     }
-    &__box {
-        padding: 14px 18px 10px;
-        background-color: $colorWhite;
-        min-height: 127px;
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-    }
     &__desc {
         font-size: 1.8rem;
         line-height: 1.4;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        padding: 14px 18px 10px;
+        @include sp {
+            font-size: 1.5rem;
+        }
     }
     &__date {
-        font-size: 1.6rem;
+        font-weight: 400;
+        font-size: 1.4rem;
         line-height: 1.6;
         text-align: right;
+        margin-top: auto;
+        padding: 0 18px 10px;
+        @include sp {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -373,6 +562,10 @@
 .works {
     padding-top: 70px;
     padding-bottom: 100px;
+    @include sp {
+        padding-top: 55px;
+        padding-bottom: 80px;
+    }
 
     &-container {
         width: 100%;
@@ -392,16 +585,25 @@
     }
     &__box {
         padding: 18px;
-        min-height: 196px;
+        min-height: 181px;
     }
     &__item-desc {
         font-size: 1.6rem;
         line-height: 1.5;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        @include sp {
+            font-size: 1.4rem;
+        }
     }
     &__item-list {
-        margin-top: 30px;
+        margin-top: 15px;
+        font-weight: 400;
         font-size: 1.4rem;
-        line-height: 1.4;
+        line-height: 1.5;
+        @include sp {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -409,7 +611,7 @@
 .swiper-container {
     margin-top: 68px !important; //読み込んでいるCDNで"margin-top: 0;"と定義されているため"!important"を使用
     width: 100%;
-    height: 420px;
+    height: 405px;
 }
 
 // --------------------------------------------------------
@@ -419,17 +621,29 @@
     padding-top: 70px;
     padding-bottom: 100px;
     background: linear-gradient(90deg, $colorBlue 0%, $colorGreenBase 100%, $colorGreenLight 100%);
+    @include sp {
+        padding-top: 55px;
+        padding-bottom: 80px;
+    }
 
     &__text {
         margin-top: 36px;
         color: $colorWhite;
         text-align: center;
+        @include sp {
+            margin-top: 30px;
+            line-height: 1.4;
+        }
     }
     &__box {
         margin-top: 44px;
         padding: 31px 62px;
         background-color: $colorWhite;
         box-shadow: 0 3px 6px $colorGlayHeavy;
+        @include sp {
+            margin-top: 35px;
+            padding: 20px 15px;
+        }
     }
     &__item {
         &:not(:nth-of-type(1)) {
@@ -438,17 +652,23 @@
     }
     &__label {
         font-size: 1.6rem;
+        @include sp {
+            font-size: 1.4rem;
+        }
     }
     &__note {
         display: inline-block;
         background-color: $colorDarkBlue;
         color: $colorWhite;
         font-size: 1.4rem;
-        height: 24px;
-        line-height: 24px;
+        height: 20px;
+        line-height: 20px;
         padding: 0 15px;
         border-radius: 5px;
         margin-left: 8px;
+        @include sp {
+            font-size: 1.2rem;
+        }
     }
     &__text-input {
         display: block;
@@ -460,6 +680,9 @@
         padding: 6px 12px;
         border: 1px solid $colorGlayBase;
         border-radius: 4px;
+        @include sp {
+            font-size: 1.3rem;
+        }
     }
     &__textarea {
         display: block;
@@ -473,6 +696,9 @@
         padding: 6px 12px;
         border: 1px solid $colorGlayBase;
         border-radius: 5px;
+        @include sp {
+            font-size: 1.3rem;
+        }
     }
     &__checkbox-wrapper {
         margin-top: 30px;
@@ -517,6 +743,9 @@
         font-size: 1.6rem;
         padding-left: 20px;
         position: relative;
+        @include sp {
+            font-size: 1.4rem;
+        }
 
         &::after {
             content: '';
@@ -534,6 +763,9 @@
     &__submit-wrapper {
         margin-top: 30px;
         text-align: center;
+        @include sp {
+            margin-top: 20px;
+        }
     }
 }
 
@@ -549,17 +781,31 @@
         padding: 30px 0;
         width: 100%;
         height: 100px;
+        @include sp {
+            padding: 15px 0;
+        }
     }
     &__list {
         display: flex;
         justify-content: center;
+        @include sp {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__item {
-        font-size: 1.6rem;
-        transition: all 0.3s;
+        font-size: 1.4rem;
+        @include sp {
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
 
         &:not(:nth-of-type(1)) {
             margin-left: 25px;
+            @include sp {
+                margin-top: 5px;
+                margin-left: initial;
+            }
         }
     }
     &__link {
@@ -577,6 +823,9 @@
         display: block;
         font-weight: 400;
         font-size: 1.4rem;
+        @include sp {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -587,7 +836,10 @@
     position: fixed;
     bottom: 60px;
     right: 40px;
-    z-index: 20;
+    z-index: 5;
+    @include sp {
+        right: 4%;
+    }
 }
 .js-scroll-top__link {
     background-color: $colorDarkBlue;
@@ -601,5 +853,104 @@
 }
 
 // --------------------------------------------------------
-// jQuery アコーディオン
+// jQuery スマホ用ヘッダーコンテンツ ハンバーガーメニュー
 // --------------------------------------------------------
+.js-body--noscroll {
+    overflow: hidden;
+}
+.header {
+    &__sp-content {
+        display: none;
+        @include tab {
+            display: block;
+        }
+    }
+    &__sp-navi-wrapper {
+        transform: translateX(100%);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 30;
+        &.slide-in {
+            transform: translateX(0);
+            transition: 0.5s;
+        }
+    }
+    &__sp-navi {
+        width: 100%;
+        height: 100%;
+        background-color: $colorBlueLightGlay;
+        z-index: 30;
+    }
+    &__sp-navi-list {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__sp-navi-item {
+        margin-right: 0;
+        margin-bottom: 40px;
+
+        color: $colorBlackBase;
+        font-size: 1.6rem;
+    }
+}
+
+.hamburger-bottun {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 35;
+    transition: all 0.5s;
+    @include sp {
+        top: 18px;
+        right: 4%;
+    }
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.5s;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 3px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $colorDarkBlue;
+    }
+    &__icon--top {
+        top: 10px;
+    }
+    &__icon--middle {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__icon--bottom {
+        bottom: 9px;
+    }
+
+    &.js-hamburger-bottun--close .hamburger-bottun__icon--top {
+        transform: translate(-50%, 8px) rotate(45deg);
+        transition: 0.5s;
+    }
+    &.js-hamburger-bottun--close .hamburger-bottun__icon--middle {
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    &.js-hamburger-bottun--close .hamburger-bottun__icon--bottom {
+        transform: translate(-50%, -9px) rotate(-45deg);
+        transition: 0.5s;
+    }
+}

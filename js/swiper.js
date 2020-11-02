@@ -18,15 +18,20 @@ var mySwiper = new Swiper('.swiper-container', {
 
     // レスポンシブ化条件
     breakpoints: {
-        // 980ピクセル幅以下になったら
-        980: {
-            slidesPerView: 3,
+        // 896ピクセル幅以下になったら
+        896: {
+            slidesPerView: 4,
             spaceBetween: 30,
         },
-        // 640ピクセル幅以下になったら
-        640: {
+        // 767ピクセル幅以下になったら
+        767: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 30,
+        },
+        // 559ピクセル幅以下になったら
+        559: {
+            slidesPerView: 2,
+            spaceBetween: 15,
         },
     },
 
