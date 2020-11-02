@@ -31,14 +31,28 @@
         padding-right: 4%;
     }
 }
-.br--unvisible {
+.br--pc-visible {
     @include tab {
         display: none;
+    }
+}
+.br--tab-unvisible {
+    @include tab {
+        display: none;
+    }
+    @include sp {
+        display: block;
     }
 }
 .br--visible {
     display: none;
     @include tab {
+        display: block;
+    }
+}
+.br--sp-visible {
+    display: none;
+    @include sp {
         display: block;
     }
 }
@@ -208,13 +222,13 @@
         }
     }
     &__text-box {
-        width: 360px;
+        width: 450px;
         margin-top: 159px;
         @include pc {
             margin-left: 60px;
         }
         @include tab {
-            width: 465px;
+            // width: 465px;
             margin: -15px auto 0;
             z-index: 2;
         }
@@ -227,17 +241,21 @@
         font-size: 3.2rem;
         line-height: 1.4;
         @include sp {
+            text-align: center;
+        }
+        @include sp {
             font-size: 2.6rem;
         }
     }
     &__desc {
         font-size: 1.6rem;
         line-height: 1.5;
-        width: 260px;
+        width: 450px;
         margin-top: 44px;
         @include tab {
             width: 100%;
             margin-top: 35px;
+            text-align: center;
         }
         @include sp {
             font-size: 1.5rem;

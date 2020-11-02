@@ -41,8 +41,20 @@ p {
 }
 
 @media (max-width: 896px) {
-  .br--unvisible {
+  .br--pc-visible {
     display: none;
+  }
+}
+
+@media (max-width: 896px) {
+  .br--tab-unvisible {
+    display: none;
+  }
+}
+
+@media (max-width: 559px) {
+  .br--tab-unvisible {
+    display: block;
   }
 }
 
@@ -52,6 +64,16 @@ p {
 
 @media (max-width: 896px) {
   .br--visible {
+    display: block;
+  }
+}
+
+.br--sp-visible {
+  display: none;
+}
+
+@media (max-width: 559px) {
+  .br--sp-visible {
     display: block;
   }
 }
@@ -298,7 +320,7 @@ p {
 }
 
 .hero__text-box {
-  width: 360px;
+  width: 450px;
   margin-top: 159px;
 }
 
@@ -310,7 +332,6 @@ p {
 
 @media (max-width: 896px) {
   .hero__text-box {
-    width: 465px;
     margin: -15px auto 0;
     z-index: 2;
   }
@@ -330,6 +351,12 @@ p {
 
 @media (max-width: 559px) {
   .hero__catchcopy {
+    text-align: center;
+  }
+}
+
+@media (max-width: 559px) {
+  .hero__catchcopy {
     font-size: 2.6rem;
   }
 }
@@ -337,7 +364,7 @@ p {
 .hero__desc {
   font-size: 1.6rem;
   line-height: 1.5;
-  width: 260px;
+  width: 450px;
   margin-top: 44px;
 }
 
@@ -345,6 +372,7 @@ p {
   .hero__desc {
     width: 100%;
     margin-top: 35px;
+    text-align: center;
   }
 }
 
