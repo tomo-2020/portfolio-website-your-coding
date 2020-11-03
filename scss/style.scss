@@ -36,23 +36,9 @@
         display: none;
     }
 }
-.br--tab-unvisible {
-    @include tab {
-        display: none;
-    }
-    @include sp {
-        display: block;
-    }
-}
-.br--visible {
+.br--pc-unvisible {
     display: none;
     @include tab {
-        display: block;
-    }
-}
-.br--sp-visible {
-    display: none;
-    @include sp {
         display: block;
     }
 }
@@ -723,11 +709,11 @@
         text-align: center;
     }
     &__checkbox {
-        display: none;
+        // display: none;
+        opacity: 0; //jsのバリデーション機能を保たせたまま、デフォルトのチェックボックスを非表示にする
+        // vertical-align: text-bottom;
+        // transform: scale(1.2);
 
-        // &:checked + .contact__checkbox-label {
-        //     color: $colorDarkBlue;
-        // }
         &:checked + .contact__checkbox-label::before {
             content: '';
             display: block;

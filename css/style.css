@@ -46,34 +46,12 @@ p {
   }
 }
 
-@media (max-width: 896px) {
-  .br--tab-unvisible {
-    display: none;
-  }
-}
-
-@media (max-width: 559px) {
-  .br--tab-unvisible {
-    display: block;
-  }
-}
-
-.br--visible {
+.br--pc-unvisible {
   display: none;
 }
 
 @media (max-width: 896px) {
-  .br--visible {
-    display: block;
-  }
-}
-
-.br--sp-visible {
-  display: none;
-}
-
-@media (max-width: 559px) {
-  .br--sp-visible {
+  .br--pc-unvisible {
     display: block;
   }
 }
@@ -990,7 +968,7 @@ p {
 }
 
 .contact__checkbox {
-  display: none;
+  opacity: 0;
 }
 
 .contact__checkbox:checked + .contact__checkbox-label::before {
