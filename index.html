@@ -5,23 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        <!-- ノーマライズCSSの読み込み -->
-        <link rel="stylesheet" href="css/destyle.css" />
-
-        <!-- Webフォントの読み込み -->
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
-
-        <!-- fontawesomeの読み込み -->
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
-
-        <link rel="stylesheet" href="css/style.min.css" />
-
         <!-- javascript Swiiperスライダーの読み込み -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 
         <!-- javascript AOSスクロールアニメーションの読み込み -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+        <!-- jQuery jQuery-Validation-Engineフォームバリデーション の読み込み -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/validationEngine.jquery.min.css" type="text/css" />
+
+        <!-- fontawesomeの読み込み -->
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+
+        <!-- Webフォントの読み込み -->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+
+        <!-- ノーマライズCSSの読み込み -->
+        <link rel="stylesheet" href="css/destyle.css" />
+
+        <link rel="stylesheet" href="css/style.min.css" />
         <title>ユアコーディング ＜ポートフォリオ＞</title>
         <meta name="description" content="ユアコーディング ＜ポートフォリオ＞です。" />
 
@@ -262,7 +264,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <p class="price__note" data-aos="fade-in">＊詳細な価格はページや仕様によって異なります</p>
+                        <p class="price__note">＊詳細な価格はページや仕様によって異なります</p>
                     </div>
                 </section>
                 <!-- /price -->
@@ -280,7 +282,7 @@
                                 ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。<br />
                                 ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。
                             </dd>
-                            <dt class="faq__box-heading js-accodion-heading">WordPressのカスタマイズを<br class="br--visible" />お願いすることも可能でしょうか？</dt>
+                            <dt class="faq__box-heading js-accodion-heading">WordPressのカスタマイズを<br class="br--pc-unvisible" />お願いすることも可能でしょうか？</dt>
                             <dd class="faq__box-desc js-accodion-desc">可能です。ただECサイトなどの場合は構築難易度や工数の関係で綿密にヒアリングさせていただきたく思います。</dd>
                             <dt class="faq__box-heading js-accodion-heading">コーディングのスピード感が知りたい</dt>
                             <dd class="faq__box-desc js-accodion-desc">HTMLレスポンシブ込み5ページで1週間、10ページで2週間、WordPressサイト5ページで2週間、10ページで3週間が目安に なります。</dd>
@@ -516,41 +518,76 @@
                 <!-- contact-->
                 <section class="contact" id="contact">
                     <div class="container">
-                        <h2 class="primary-heading primary-heading--white" data-aos="fade-in">
+                        <h2 class="primary-heading primary-heading--white">
                             お問い合わせ<br />
                             <span class="subheading subheading--white">CONTACT</span>
                         </h2>
-                        <p class="contact__text" data-aos="fade-in">コーディングの人出が足りないとき、 あなたの力になります</p>
-                        <form class="contact__box" action="comfirm" method="post" data-aos="fade-in">
+                        <p class="contact__text">コーディングの人出が足りないとき、 あなたの力になります</p>
+                        <form id="js-form" class="contact__box" action="comfirm" method="post" novalidate>
                             <ul class="contact__list">
                                 <li class="contact__item">
                                     <label for="yourname" class="contact__label">
                                         お名前
                                         <span class="contact__note">必須</span>
                                     </label>
-                                    <input type="text" id="yourname" name="yourname" class="contact__text-input" />
+                                    <input
+                                        type="text"
+                                        id="yourname"
+                                        name="yourname"
+                                        required
+                                        class="contact__text-input validate[required]"
+                                        data-errormessage-value-missing="必須項目を入力してください"
+                                        data-prompt-position="topRight"
+                                    />
                                 </li>
                                 <li class="contact__item">
                                     <label for="email" class="contact__label">
                                         メールアドレス
                                         <span class="contact__note">必須</span>
                                     </label>
-                                    <input type="mail" id="email" name="email" class="contact__text-input" />
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        class="contact__text-input validate[required,custom[email]]"
+                                        data-errormessage-value-missing="必須項目を入力してください"
+                                        data-errormessage-custom-error="メールアドレスの形式で入力してください"
+                                        data-prompt-position="topRight"
+                                    />
                                 </li>
                                 <li class="contact__item">
                                     <label for="content" class="contact__label">
                                         お問い合わせ内容
                                         <span class="contact__note">必須</span>
                                     </label>
-                                    <textarea id="content" name="content" class="contact__textarea" cols="30" rows="10"></textarea>
+                                    <textarea
+                                        id="content"
+                                        name="content"
+                                        cols="30"
+                                        rows="10"
+                                        required
+                                        class="contact__textarea validate[required]"
+                                        data-errormessage-value-missing="必須項目を入力してください"
+                                        data-prompt-position="topRight"
+                                    ></textarea>
                                 </li>
                             </ul>
                             <div class="contact__checkbox-wrapper">
-                                <input type="checkbox" value="agree" id="agree" class="contact__checkbox" />
+                                <input
+                                    type="checkbox"
+                                    name="agree"
+                                    value="agree"
+                                    id="agree"
+                                    class="contact__checkbox validate[minCheckbox[1]]"
+                                    data-errormessage-range-underflow="同意する場合はチェックボックスを選択してください"
+                                    required
+                                    data-prompt-position="topRight"
+                                />
                                 <label for="agree" class="contact__checkbox-label">プライバシーポリシーに同意する</label>
                             </div>
                             <div class="contact__submit-wrapper">
-                                <input type="submit" value="送信する" class="button" />
+                                <button type="submit" class="button">送信する</button>
                             </div>
                         </form>
                     </div>
@@ -589,27 +626,28 @@
             <!-- jqueryの読み込み -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-            <!-- javascript Swiperスライダー の読み込み -->
+            <!-- javascript Swiperスライダー CDNの読み込み -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
 
-            <!-- javascript AOSスクロールアニメーションの読み込み -->
+            <!-- javascript AOSスクロールアニメーション CDNの読み込み -->
             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-            <!-- javascript AOSスクロールアニメーションの初期化・設定 -->
-            <script>
-                AOS.init({
-                    offset: 200, //スクロール画面下部からの距離（発動のタイミング）を設定
-                    duration: 400, //アニメーションスピード
-                    easing: 'ease-in-sine', //イージング
-                    delay: 100, //発火タイミングの遅延
-                    disable: 'mobile', //モバイル端末では発動しない
-                    disable: window.innerWidth < 897, //画面幅が●●px未満では発動しない
-                });
-            </script>
+            <!-- javascript AOSスクロールアニメーション の読み込み -->
+            <script type="text/javascript" src="js/aos.js"></script>
 
-            <!-- javascript jsファイルの読み込み -->
-            <script type="text/javascript" src="js/script.js"></script>
+            <!-- jQuery jQuery-Validation-Engineフォームバリデーション の読み込み -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery-1.8.2.min.js" type="text/javascript"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/languages/jquery.validationEngine-ja.min.js" type="text/javascript" charset="utf-8"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery.validationEngine.min.js" type="text/javascript" charset="utf-8"></script>
+
+            <!-- 各種jsファイル の読み込み -->
+            <script type="text/javascript" src="js/accordion.js"></script>
+            <script type="text/javascript" src="js/hamburger.js"></script>
+            <script type="text/javascript" src="js/scroll-top.js"></script>
+            <script type="text/javascript" src="js/smooth-scroll.js"></script>
+            <!-- <script type="text/javascript" src="js/sticky-header.js"></script> -->
             <script type="text/javascript" src="js/swiper.js"></script>
+            <script type="text/javascript" src="js/validation.js"></script>
         </div>
     </body>
 </html>

@@ -1,3 +1,4 @@
+//Swiperスライダー
 var mySwiper = new Swiper('.swiper-container', {
     // オプションパラメータ(一部のみ抜粋)
     loop: true, // 最後のスライドまで到達した場合、最初に戻らずに続けてスライド可能にするか。
