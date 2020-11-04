@@ -711,8 +711,6 @@
     &__checkbox {
         // display: none;
         opacity: 0; //jsのバリデーション機能を保たせたまま、デフォルトのチェックボックスを非表示にする
-        // vertical-align: text-bottom;
-        // transform: scale(1.2);
 
         &:checked + .contact__checkbox-label::before {
             content: '';
@@ -957,4 +955,34 @@
         transform: translate(-50%, -9px) rotate(-45deg);
         transition: 0.5s;
     }
+}
+
+// --------------------------------------------------------
+// jQuery Validation-Engine フォームバリデーション
+// --------------------------------------------------------
+.formError {
+    // left: 661px;
+    // margin-top: -71px;
+    width: 26%;
+    min-width: 150px;
+    left: 56% !important;
+    // right: 50px !important;
+    margin-top: -25px !important;
+}
+
+.formError .formErrorContent {
+    background: $colorRose;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    border: none;
+    box-shadow: none;
+    padding: 8px 12px 6px;
+    border-radius: 4px;
+}
+.formError .formErrorArrow div {
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    background: $colorRose;
 }

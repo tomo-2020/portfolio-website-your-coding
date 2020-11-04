@@ -264,7 +264,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <p class="price__note" data-aos="fade-in">＊詳細な価格はページや仕様によって異なります</p>
+                        <p class="price__note">＊詳細な価格はページや仕様によって異なります</p>
                     </div>
                 </section>
                 <!-- /price -->
@@ -530,26 +530,60 @@
                                         お名前
                                         <span class="contact__note">必須</span>
                                     </label>
-                                    <input type="text" id="yourname" name="yourname" required class="contact__text-input validate[required]" data-prompt-position="bottomLeft" />
+                                    <input
+                                        type="text"
+                                        id="yourname"
+                                        name="yourname"
+                                        required
+                                        class="contact__text-input validate[required]"
+                                        data-errormessage-value-missing="必須項目を入力してください"
+                                        data-prompt-position="topRight"
+                                    />
                                 </li>
                                 <li class="contact__item">
                                     <label for="email" class="contact__label">
                                         メールアドレス
                                         <span class="contact__note">必須</span>
                                     </label>
-                                    <input type="email" id="email" name="email" required class="contact__text-input validate[required,custom[email]]" data-prompt-position="bottomLeft" />
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        class="contact__text-input validate[required,custom[email]]"
+                                        data-errormessage-value-missing="必須項目を入力してください"
+                                        data-errormessage-custom-error="メールアドレスの形式で入力してください"
+                                        data-prompt-position="topRight"
+                                    />
                                 </li>
                                 <li class="contact__item">
                                     <label for="content" class="contact__label">
                                         お問い合わせ内容
                                         <span class="contact__note">必須</span>
                                     </label>
-                                    <textarea id="content" name="content" cols="30" rows="10" required class="contact__textarea validate[required]" data-prompt-position="bottomLeft"></textarea>
+                                    <textarea
+                                        id="content"
+                                        name="content"
+                                        cols="30"
+                                        rows="10"
+                                        required
+                                        class="contact__textarea validate[required]"
+                                        data-errormessage-value-missing="必須項目を入力してください"
+                                        data-prompt-position="topRight"
+                                    ></textarea>
                                 </li>
                             </ul>
                             <div class="contact__checkbox-wrapper">
-                                <!-- <input type="checkbox" name="趣味" class="validate[minCheckbox[1]]" /> -->
-                                <input type="checkbox" name="agree" value="agree" id="agree" class="contact__checkbox validate[minCheckbox[1]]" required data-prompt-position="bottomLeft" />
+                                <input
+                                    type="checkbox"
+                                    name="agree"
+                                    value="agree"
+                                    id="agree"
+                                    class="contact__checkbox validate[minCheckbox[1]]"
+                                    data-errormessage-range-underflow="同意する場合はチェックボックスを選択してください"
+                                    required
+                                    data-prompt-position="topRight"
+                                />
                                 <label for="agree" class="contact__checkbox-label">プライバシーポリシーに同意する</label>
                             </div>
                             <div class="contact__submit-wrapper">

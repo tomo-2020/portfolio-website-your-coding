@@ -7,10 +7,10 @@ jQuery(document).ready(function () {
     $('#js-form').validationEngine({
         scrollOffset: 94,
     });
-
+    //メッセージポップアップの位置を設定する
     $(function () {
         $('js-form').validationEngine({
-            promptPosition: 'bottomLeft',
+            promptPosition: 'topRight',
         });
     });
 });
