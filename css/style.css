@@ -1040,6 +1040,20 @@ p {
   }
 }
 
+.contact__end-message {
+  display: none;
+  margin-top: 30px;
+}
+
+.contact__false-message {
+  display: none;
+  margin-top: 30px;
+}
+
+.button--disabled[disabled] {
+  opacity: 0.4;
+}
+
 .footer {
   width: 100%;
   position: absolute;

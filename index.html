@@ -25,7 +25,7 @@
 
         <link rel="stylesheet" href="css/style.min.css" />
         <title>ユアコーディング ＜ポートフォリオ＞</title>
-        <meta name="description" content="ユアコーディング ＜ポートフォリオ＞です。" />
+        <meta name="description" content="ユアコーディング ＜ポートフォリオ＞です。コーディング部分を担当しました。" />
 
         <!-- noindex,nofollowの設定　ポートフォリオ用模写コーディングサイトのため設定 -->
         <meta name="robots" content="noindex,nofollow" />
@@ -78,7 +78,7 @@
                                         loading="lazy"
                                         width="47"
                                         height="47"
-                                        alt=""
+                                        alt="株式会社ユアコーディング"
                                         class="header__image"
                                     />
                                     <span class="header__title">ユアコーディング</span>
@@ -523,7 +523,7 @@
                             <span class="subheading subheading--white">CONTACT</span>
                         </h2>
                         <p class="contact__text">コーディングの人出が足りないとき、 あなたの力になります</p>
-                        <form id="js-form" class="contact__box" action="comfirm" method="post" novalidate>
+                        <form id="js-form" class="contact__box" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTiz-wsI0gQ_8GEuG1mhqIX4T7zx4lrTNQOmeWKFxbbhKB4g/formResponse" method="post" novalidate>
                             <ul class="contact__list">
                                 <li class="contact__item">
                                     <label for="yourname" class="contact__label">
@@ -533,7 +533,7 @@
                                     <input
                                         type="text"
                                         id="yourname"
-                                        name="yourname"
+                                        name="entry.1254817411"
                                         required
                                         class="contact__text-input validate[required]"
                                         data-errormessage-value-missing="必須項目を入力してください"
@@ -548,7 +548,7 @@
                                     <input
                                         type="email"
                                         id="email"
-                                        name="email"
+                                        name="entry.209156393"
                                         required
                                         class="contact__text-input validate[required,custom[email]]"
                                         data-errormessage-value-missing="必須項目を入力してください"
@@ -563,7 +563,7 @@
                                     </label>
                                     <textarea
                                         id="content"
-                                        name="content"
+                                        name="entry.215595373"
                                         cols="30"
                                         rows="10"
                                         required
@@ -578,16 +578,18 @@
                                     type="checkbox"
                                     name="agree"
                                     value="agree"
-                                    id="agree"
+                                    id="js-agree"
                                     class="contact__checkbox validate[minCheckbox[1]]"
                                     data-errormessage-range-underflow="同意する場合はチェックボックスを選択してください"
                                     required
                                     data-prompt-position="topRight"
                                 />
-                                <label for="agree" class="contact__checkbox-label">プライバシーポリシーに同意する</label>
+                                <label for="js-agree" class="contact__checkbox-label">プライバシーポリシーに同意する</label>
                             </div>
                             <div class="contact__submit-wrapper">
-                                <button type="submit" class="button">送信する</button>
+                                <button type="submit" id="js-submit" class="button button--disabled button--fadeout" disabled>送信する</button>
+                                <p class="contact__end-message">お問い合わせいただきありがとうございました</p>
+                                <p class="contact__false-message">送信が失敗しました</p>
                             </div>
                         </form>
                     </div>
