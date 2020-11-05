@@ -214,7 +214,6 @@
             margin-left: 60px;
         }
         @include tab {
-            // width: 465px;
             margin: -15px auto 0;
             z-index: 2;
         }
@@ -611,7 +610,7 @@
     }
 }
 
-//swiperスライダー
+// swiperスライダー
 .swiper-container {
     margin-top: 68px !important; //読み込んでいるCDNで"margin-top: 0;"と定義されているため"!important"を使用
     width: 100%;
@@ -696,7 +695,6 @@
         line-height: 1.4;
         width: 100%;
         max-width: 856px;
-
         padding: 6px 12px;
         border: 1px solid $colorGlayBase;
         border-radius: 5px;
@@ -769,6 +767,19 @@
             margin-top: 20px;
         }
     }
+    // フォーム送信時に表示されるメッセージ
+    &__end-message {
+        display: none;
+        margin-top: 30px;
+    }
+    &__false-message {
+        display: none;
+        margin-top: 30px;
+    }
+    // /フォーム送信時に表示されるメッセージ
+}
+.button--disabled[disabled] {
+    opacity: 0.4;
 }
 
 // --------------------------------------------------------
@@ -860,6 +871,7 @@
 .js-body--noscroll {
     overflow: hidden;
 }
+// ハンバーガーアイコンを選択した際に表示されるメニュー
 .header {
     &__sp-content {
         display: none;
@@ -897,12 +909,13 @@
     &__sp-navi-item {
         margin-right: 0;
         margin-bottom: 40px;
-
         color: $colorBlackBase;
         font-size: 1.6rem;
     }
 }
+// /ハンバーガーアイコンを選択した際に表示されるメニュー
 
+// ハンバーガーアイコン
 .hamburger-bottun {
     display: block;
     position: absolute;
@@ -922,7 +935,6 @@
         opacity: 0.7;
         transition: all 0.5s;
     }
-
     &__icon {
         width: 30px;
         height: 3px;
@@ -942,7 +954,6 @@
     &__icon--bottom {
         bottom: 9px;
     }
-
     &.js-hamburger-bottun--close .hamburger-bottun__icon--top {
         transform: translate(-50%, 8px) rotate(45deg);
         transition: 0.5s;
@@ -956,17 +967,15 @@
         transition: 0.5s;
     }
 }
+// /ハンバーガーアイコン
 
 // --------------------------------------------------------
 // jQuery Validation-Engine フォームバリデーション
 // --------------------------------------------------------
 .formError {
-    // left: 661px;
-    // margin-top: -71px;
     width: 26%;
     min-width: 150px;
     left: 56% !important;
-    // right: 50px !important;
     margin-top: -25px !important;
 }
 
