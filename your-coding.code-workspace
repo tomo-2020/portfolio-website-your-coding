@@ -3,5 +3,9 @@
 		{
 			"path": "."
 		}
-	]
+	],
+  "settings": {
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2
+	}
 }
